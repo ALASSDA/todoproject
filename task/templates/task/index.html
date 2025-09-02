@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>task app</title>
+  </head>
+  <body>
+    <h1>list</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="new work">
+        <button type="submit">add</button>
+
+
+    </form>
+    <ul>
+      {% for task in tasks %}
+      <li>
+        {{ task.title }}
+        {% if task.completed %}
+          <li>completed</li> 
+        {% else %} 
+          <li>not completed</li>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

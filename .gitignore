@@ -1,0 +1,11 @@
+
+*.pyc
+__pycach__/
+db.sqlite3
+venv/
+*.log
+*.pot
+*.py[cod]
+*.swp
+*.swo
+*.Ds_store
